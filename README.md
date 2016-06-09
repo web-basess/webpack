@@ -127,6 +127,8 @@ var HtmlWebpackPlugin = require("html-webpack-plugin");
 对html进行编译。新生成的文件路径都会随着配置有变化
 
 **entry：** 是页面入口文件配置，output 是对应输出项配置（即入口文件最终要生成什么名字的文件、存放到哪里）
+
 **plugins：** 是插件项 插件的使用在这个模块下
+
 **module.loaders：**是最关键的一块配置，它告知 webpack 每一种文件都需要使用什么加载器来处理
 
