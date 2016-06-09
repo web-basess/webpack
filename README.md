@@ -1,7 +1,7 @@
 ##webpack 应用
 ###简介
 >Webpack 是当下最热门的前端资源模块化管理和打包工具。它可以将许多松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。还可以将按需加载的模块进行代码分隔，等到实际需要的时候再异步加载。通过 loader 的转换，任何形式的资源都可以视作模块，比如 CommonJs 模块、 AMD 模块、 ES6 模块、CSS、图片、 JSON、Coffeescript、 LESS 等。
->
+
 ###安装（install）
 首先要安装 Node.js， Node.js 自带了软件包管理器 npm，Webpack 需要 Node.js v0.6 以上支持，建议使用最新版 Node.js。
 通过npm安装webpack
@@ -92,8 +92,8 @@ npm install --save-dev url-loader  file-loader
 通过file-loader  url-loader 对图片进行打包
 ```javascript
 {
-                test: /\.(eot|woff|woff2|ttf|svg|png|jpe?g|gif)(\?\S*)?$/,
-                loader: 'url-loader?limit=10000&name=dist/[name][hash].[ext]'
+   test: /\.(eot|woff|woff2|ttf|svg|png|jpe?g|gif)(\?\S*)?$/,
+   loader: 'url-loader?limit=10000&name=dist/[name][hash].[ext]'
  }
 //limit 图片小于10kb 采用base64位编码  name 》＝路径 hash编码 图片格式
 ```
@@ -108,21 +108,21 @@ npm install --save-dev html-loader  html-webpack-plugin
 //webpack.congif.js
 //html-loader
 {
-                // HTML LOADER
-                test: /\.html$/,
-                loader: 'html-loader'
-            }
+	// HTML LOADER
+  test: /\.html$/,
+  loader: 'html-loader'
+   }
 var HtmlWebpackPlugin = require("html-webpack-plugin");
  new HtmlWebpackPlugin({                        //根据模板插入css/js等生成最终HTML
-                 filename:'./dist/index.html',    //生成的html存放路径，相对于 path
-                 template:'index.html',    //html模板路径
-                 inject:true,    //允许插件修改哪些内容，包括head与body
-                 hash:true,    //为静态资源生成hash值
-                 minify:{    //压缩HTML文件
-                    removeComments:true,    //移除HTML中的注释
-                       collapseWhitespace:false    //删除空白符与换行符
-                }
-        })
+    filename:'./dist/index.html',    //生成的html存放路径，相对于 path
+    template:'index.html',    //html模板路径
+    inject:true,    //允许插件修改哪些内容，包括head与body
+    hash:true,    //为静态资源生成hash值
+    minify:{    //压缩HTML文件
+       removeComments:true,    //移除HTML中的注释
+       collapseWhitespace:false    //删除空白符与换行符
+ }
+})
 ```
 对html进行编译。新生成的文件路径都会随着配置有变化
 
