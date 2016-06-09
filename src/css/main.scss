@@ -1,0 +1,155 @@
+@import "_reset";
+
+.w823 {
+  width: 823px;
+  margin: 0 auto;
+}
+
+header {
+  height: 70px;
+  background: #323a45;
+}
+
+header {
+  .wrap {
+    position: relative;
+  }
+  .logo {
+    background: url("../images/logo.png") no-repeat;
+    width: 167px;
+    height: 19px;
+    display: inline-block;
+    position: absolute;
+    left: 50px;
+    top: 25px;
+  }
+  nav {
+    float: right;
+
+    li {
+      height: 70px;
+      line-height: 70px;
+      display: inline-block;
+
+      a {
+        display: block;
+        padding: 0 15px;
+        color: #fff;
+        font-size: 18px;
+
+        &:hover {
+          background: #4bc8b6;
+          color: #fff;
+          transition: all .3s ease;
+        }
+      }
+    }
+  }
+
+}
+
+.banner {
+  background: url("../images/banner.jpg") no-repeat center center;
+  height: 358px;
+}
+
+.main {
+  height: 347px;
+  background: #4bc8b6;
+  border: 1px solid #40b399;
+  border-width: 1px 0;
+  color: #fff;
+  text-align: center;
+  h2 {
+    text-align: center;
+    font-size: 36px;
+    padding: 30px 0;
+  }
+  p {
+    text-align: center;
+  }
+  .more {
+    display: inline-block;
+    font-size: 20px;
+    color: #fff;
+    background: #038f75;
+    padding: 5px 10px;
+    margin-top: 80px;
+  }
+}
+
+.list {
+  margin: 20px auto;
+
+  li {
+    display: inline-block;
+    width: 240px;
+    border: 1px solid #f6f6f6;
+    height: 256px;
+    text-align: center;
+    margin-right: 44px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      transform: scale(1.1);
+      transition: all .3s ease;
+    }
+    .photo {
+      img {
+        width: 100%;
+      }
+    }
+    h6 {
+      font-size: 16px;
+      color: #00b896;
+      border-bottom: 1px solid #f6f6f6;
+      padding: 5px 0;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 12px;
+      color: #888;
+    }
+    a {
+      display: inline-block;
+      padding: 5px 10px;
+      background: #00b896;
+      color: #fff;
+      margin-top: 10px;
+    }
+  }
+
+}
+
+footer {
+
+  .wrap {
+    background:#46b39e;
+    height:244px;
+
+    .list {
+      display:inline-block;
+      width:220px;
+      margin-right:30px;
+      color:#fff;
+      margin-top:25px;
+      vertical-align: top;
+      h6{
+        font-size:20px;
+        margin-bottom:10px;
+      }
+      p{
+        font-size: 12px;
+      }
+    }
+  }
+  .footer {
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    color:#fff;
+    background: #25292c;
+  }
+}
